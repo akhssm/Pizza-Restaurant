@@ -6,7 +6,14 @@ import drink from "../assets/image-5.jpg";
 import bread from "../assets/image-2.jpg";
 
 const Gallery = () => {
-  const images = [pizza, bread1, bread2, salad, drink, bread];
+  const images = [
+    { src: pizza, alt: "Cheese pizza" },
+    { src: bread1, alt: "Garlic bread" },
+    { src: bread2, alt: "Cheese bread" },
+    { src: salad, alt: "Fresh salad" },
+    { src: drink, alt: "Cold drink" },
+    { src: bread, alt: "Buttery bread" },
+  ];
 
   return (
     <section id="gallery" className="py-5">
@@ -16,19 +23,14 @@ const Gallery = () => {
           <div className="red-line"></div>
         </div>
 
-        <div className="row g-3 justify-content-center">
+        <div className="row g-3">
           {images.map((img, index) => (
-            <div
-              key={index}
-              className={
-                index === 5
-                  ? "col-md-4 offset-md-4"
-                  : index >= 3
-                  ? "col-md-6"
-                  : "col-md-4"
-              }
-            >
-              <img src={img} alt="gallery" className="img-fluid rounded" />
+            <div className="col-md-4" key={index}>
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="img-fluid rounded"
+              />
             </div>
           ))}
         </div>

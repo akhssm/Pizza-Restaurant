@@ -1,21 +1,14 @@
 import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 
-const navItems = [
-  { label: "ABOUT US", id: "about" },
-  { label: "MENU", id: "menu" },
-  { label: "BLOGS", id: "blogs" },
-  { label: "TESTIMONY", id: "testimony" },
-  { label: "FIND US", id: "contact" },
-  { label: "OUR TEAM", id: "ourteam" },
-];
-
 const Header = () => {
   return (
     <header
+      role="banner"
       style={{
         backgroundColor: "#000",
-        position: "sticky",
+        position: "fixed",
         top: 0,
+        width: "100%",
         zIndex: 1000,
       }}
     >
@@ -24,30 +17,35 @@ const Header = () => {
           Pizza Restaurant
         </h1>
 
-        <nav className="d-flex align-items-center gap-4">
-          <ul className="d-flex gap-3 m-0 p-0 list-unstyled">
-            {navItems.map((item, idx) => (
-              <li key={idx}>
+        <nav aria-label="Primary Navigation" role="navigation">
+          <ul
+            className="d-flex gap-3 m-0 p-0 list-unstyled align-items-center"
+            role="menubar"
+          >
+            {[
+              { label: "ABOUT US", id: "about" },
+              { label: "MENU", id: "menu" },
+              { label: "GALLERY", id: "gallery" },
+              { label: "FIND US", id: "contact" },
+            ].map((item, idx) => (
+              <li key={idx} role="none">
                 <a
                   href={`#${item.id}`}
-                  style={{
-                    color: "#fff",
-                    textDecoration: "none",
-                    fontWeight: 500,
-                  }}
+                  role="menuitem"
+                  style={{ color: "#fff", textDecoration: "none" }}
                 >
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-
-          <div className="d-flex gap-3">
-            <FaInstagram color="#fff" />
-            <FaFacebookF color="#fff" />
-            <FaWhatsapp color="#fff" />
-          </div>
         </nav>
+
+        <div className="d-flex gap-3" aria-label="Social media links">
+          <FaInstagram color="#fff" />
+          <FaFacebookF color="#fff" />
+          <FaWhatsapp color="#fff" />
+        </div>
       </div>
     </header>
   );
