@@ -1,9 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="text-center py-3" style={{ backgroundColor: "#000", color: "#fff" }}>
-      <p className="mb-0">© 2026 Pizza Restaurant</p>
+    <footer className="py-3" style={{ backgroundColor: "#000", color: "#aaa" }}>
+      <div className="container text-center">
+        © 2026 Pizza Restaurant
+      </div>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer

@@ -16,23 +16,17 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <section id="menu" className="container py-5" style={{ backgroundColor: "#000", color: "#fff" }}>
-      <div className="section-title">
-        <h2>MENU</h2>
+    <section id="menu" className="py-5">
+      <div className="container">
+        <div className="section-title">
+          <h2>MENU</h2>
         <div className="red-line"></div>
       </div>
-
       <div className="row g-4">
         {menuItems.map((item, index) => (
           <div className="col-md-6" key={index}>
-            <div className="d-flex gap-3" style={{ backgroundColor: "#111", padding: "10px", borderRadius: "8px" }}>
-              <img
-                src={item.img}
-                alt={item.title}
-                width="90"
-                height="70"
-                style={{ objectFit: "cover", borderRadius: "6px" }}
-              />
+            <div className="d-flex gap-3 bg-dark p-3 rounded">
+              <img src={item.img} alt={item.title} width="90" height="70" />
               <div>
                 <h6 className="text-warning mb-1">{item.title}</h6>
                 <p className="mb-0 small">{item.desc}</p>
@@ -40,7 +34,8 @@ const Menu = () => {
             </div>
           </div>
         ))}
-      </div>
+     </div>
+    </div>
     </section>
   );
 };

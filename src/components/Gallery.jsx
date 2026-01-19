@@ -9,23 +9,29 @@ const Gallery = () => {
   const images = [pizza, bread1, bread2, salad, drink, bread];
 
   return (
-    <section id="gallery" className="container py-5" style={{ backgroundColor: "#000", color: "#fff" }}>
-      <div className="section-title">
-        <h2>Gallery</h2>
-        <div className="red-line"></div>
-      </div>
+    <section id="gallery" className="py-5">
+      <div className="container">
+        <div className="section-title">
+          <h2>Gallery</h2>
+          <div className="red-line"></div>
+        </div>
 
-      <div className="row g-3">
-        {images.map((img, index) => (
-          <div className="col-md-4" key={index} style={{ backgroundColor: "#111", padding: "5px", borderRadius: "8px" }}>
-            <img
-              src={img}
-              alt="Gallery food"
-              className="img-fluid"
-              style={{ height: "220px", width: "100%", objectFit: "cover", borderRadius: "8px" }}
-            />
-          </div>
-        ))}
+        <div className="row g-3 justify-content-center">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className={
+                index === 5
+                  ? "col-md-4 offset-md-4"
+                  : index >= 3
+                  ? "col-md-6"
+                  : "col-md-4"
+              }
+            >
+              <img src={img} alt="gallery" className="img-fluid rounded" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

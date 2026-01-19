@@ -1,38 +1,26 @@
-/* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  background-color: #000; /* Whole page black */
+html,
+body {
+  background-color: #000;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1300px;
 }
 
-/* Sections */
 section {
-  padding: 60px 0;
-  background-color: transparent; /* inherit black background */
+  background-color: #000;
 }
 
-/* Section Titles */
+/* Section titles */
 .section-title {
   text-align: center;
   margin-bottom: 40px;
 }
 
 .section-title h2 {
-  font-weight: 700;
-  font-size: 2rem;
+  color: #fff;
 }
 
 .red-line {
@@ -42,19 +30,8 @@ section {
   margin: 10px auto;
 }
 
-/* Hero Section */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  background-color: #000; /* keep black background */
-  position: relative;
-}
-
-
+/* Hero */
 .hero-content {
-  position: relative;
-  z-index: 1;
   max-width: 500px;
   margin-left: 70px;
 }
@@ -62,98 +39,32 @@ section {
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  color: #fff;
 }
 
 .hero p {
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-/* Header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #000; /* header black */
-  padding: 15px 0;
-  width: 100%;
-}
-
-header h1 {
-  font-size: 1.5rem;
   color: #fff;
+  opacity: 0.9;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* Force text to white */
+p,
+h2,
+h6,
+.small {
+  color: #fff !important;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
+/* Menu card text */
+.bg-dark p {
+  color: #ccc !important;
 }
 
-header nav a:hover {
-  color: #e63946;
+/* Gallery images */
+#gallery img {
+  transition: transform 0.3s ease;
 }
 
-header svg {
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-header .social-icons a:hover {
-  color: #e63946;
-}
-
-/* Menu & Gallery items */
-.menu-item, .gallery-item, .card {
-  background-color: #111; /* dark gray cards for contrast */
-  border-radius: 10px;
-  padding: 10px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Find Us Section */
-#contact img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Footer or small text if needed */
-footer, small {
-  color: #aaa;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-content {
-    margin-left: 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  header nav ul {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+#gallery img:hover {
+  transform: scale(1.05);
 }
