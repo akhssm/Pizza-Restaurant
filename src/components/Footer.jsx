@@ -1,6 +1,13 @@
 const Footer = () => {
   return (
-    <footer className="py-3" style={{ backgroundColor: "#000", color: "#aaa" }}>
+    <footer
+      className="py-3"
+      style={{
+        backgroundColor: "#111",  // slightly lighter than page
+        color: "#fff",            // visible text
+        borderTop: "1px solid #333"
+      }}
+    >
       <div className="container text-center">
         © 2026 Pizza Restaurant
       </div>
@@ -8,4 +15,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;

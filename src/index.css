@@ -58,6 +58,14 @@ section {
   line-height: 1.6;
 }
 
+#contact {
+  background-color: #000;
+}
+
+#contact address p {
+  color: #fff;
+}
+
 /* Menu cards */
 .bg-dark {
   background-color: #1c1c1c !important;
@@ -94,9 +102,12 @@ a:focus {
 
 /* Footer */
 footer {
+  background-color: #111;          /* slightly lighter than body */
+  color: #fff;                     /* clear white text */
+  border-top: 1px solid #333;      /* visual separation */
   font-size: 0.9rem;
-  color: #aaa;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
